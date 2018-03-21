@@ -47,8 +47,8 @@
 			audio.currentTime = 2;
 
 			audio.pause();
-			input.classList.remove('focus')
-			input.classList.remove('playing')
+			input.classList.remove('focus');
+			input.classList.remove('playing');
 	
 	}
 
@@ -140,14 +140,14 @@ function createButtonsNavSounds(items, id){
 	             		buttonPlay.setAttribute('class', 'nav-button-play');
 	             		buttonPlay.setAttribute('data-key', `${id}-${index}`)
 	             		buttonAdd.setAttribute('class', 'nav-button-add');
-	             		buttonAdd.setAttribute('data-key', `${id}-${index}`)
-	             		audio.setAttribute('src', `../sounds/${id}/${item.innerText}`)
-	             		audio.setAttribute('data-key', `${id}-${index}`)
+	             		buttonAdd.setAttribute('data-key', `${id}-${index}`);
+	             		audio.setAttribute('src', `../sounds/${id}/${item.innerText}`);
+	             		audio.setAttribute('data-key', `${id}-${index}`);
 
 						item.appendChild(buttonAdd);
 						item.appendChild(buttonPlay);
 						item.appendChild(audio);
-						item.setAttribute('value', '1')
+						item.setAttribute('value', '1');
 						index++;
 						
 					}
@@ -189,31 +189,31 @@ function createLineSound(button){
 	
 	var div = document.createElement("div");
 	let audio = document.createElement('audio');
-	var label = document.createElement('label')
+	var label = document.createElement('label');
 	
 	var audioSource = button.querySelector('audio').src;
 	var dataKey = button.querySelector('button').dataset.key;
-	var soundName = 
+
 
 	div.setAttribute('class', 'instrument');
 	label.innerHTML = `${dataKey}`;
 
-	audio.setAttribute('src', `${audioSource}`)
-	audio.setAttribute('data-key', `${dataKey}`)
+	audio.setAttribute('src', `${audioSource}`);
+	audio.setAttribute('data-key', `${dataKey}`);
 
 	divInstrument.appendChild(div);
 	div.appendChild(label);
 	for(i = 0; i < 10; i++){
 
 		var input = document.createElement("input");
-		input.setAttribute("type", 'checkbox')
-		input.setAttribute('value', `${i}`)
-		input.setAttribute('data-key', `${dataKey}`)
+		input.setAttribute("type", 'checkbox');
+		input.setAttribute('value', `${i}`);
+		input.setAttribute('data-key', `${dataKey}`);
 		div.appendChild(input);
 
 	}
 
-	div.appendChild(audio)
+	div.appendChild(audio);
 
 
 }
@@ -277,7 +277,7 @@ function getAllSoundsNamesById(id){
 					
 					let node = navItem.querySelector('ul');	
 							
-					node.parentNode.removeChild(node)
+					node.parentNode.removeChild(node);
 
 					const sousItems = document.querySelectorAll('.sous-item');	
 					sousItems.forEach(function(sousItem){
