@@ -15,7 +15,7 @@
 	<link href="../stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="../stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="../js/modernizr.js"></script> <!-- Modernizr -->
 
 
 	
@@ -59,34 +59,39 @@
 	<nav class="cd-side-nav">
 		<ul>
 			<li class="cd-label">Instruments</li>
-			<li class="has-children">
-				<a id="percusions" href="#0">Percussion</a>
+			<li class="has-children" id="percusions">
+				<a class="category" name="percusions" href="#0">Percussions</a>
 			</li>
-			<li class="has-children">
-				<a id="guitar" href="#0">Vent</a>
+			<li id="trumpet" class="has-children">
+				<a  class="category" name="trumpet" href="#0">Trompette</a>
+				
 			</li>
-			<li class="has-children active">
-				<a href="#0">Cordes</a>
+			<li id="guitar" class="has-children">
+				<a class="category" name="guitar" href="#0">Guitar</a>
 					
-				<ul>
-					<li><a href="#0">Guitar</a></li>
-					<li><a href="#0">Mandolin</a></li>
-					<li><a href="#0">Violon</a></li>
-					</ul>
-				</li>
-
-			<li id="mandolin" class="has-children overview">
-				<a  href="#0">Mandolin</a>
+			
 			</li>
-			<li id="bass" class="has-children overview">
-				<a href="#0">Bass</a>
-				<ul>
-						<li><a href="#0">Bass</a></li>
-						<li><a href="#0"></a></li>
-						<li><a href="#0"></a></li>
-				</ul>
+
+			<li id="mandolin" class="has-children ">
+				<a class="category" name="mandolin" href="#0">Mandolin</a>
+			</li>
+		
+			<li  id="banjo" class="has-children">
+				<a class="category" name="banjo" href="#0">Banjo</a>
+			
 
 			</li>	
+			<li  id="double-bass" class="has-children">
+				<a class="category" name="double-bass" href="#0">Double Bass</a>
+			
+
+			</li>
+			<li  id="saxophone" class="has-children">
+				<a class="category" name="saxophone" href="#0">Saxophone</a>
+			
+
+			</li>
+			<li>	
 				<ul>
 					<!-- other list items here -->
 				</ul>
@@ -102,7 +107,7 @@
 	<div class="content-wrapper">	
 		<button class="play">play</button>
 		<button class="stop">stop</button>
-		<input type="range" class="bpm" min="10" max="230" name="progress" value="60">
+		<input type="range" class="bpm" min="10" max="200" name="progress" value="60">
 		<form>
 			
 
@@ -110,99 +115,18 @@
 			
 			<div class="instruments">
 
-				<label>Tom</label>
-				<div class=" instrument" >		
-					<input class="tom" type="checkbox" name="tom" value="0" />			
-					<input class="tom" type="checkbox" name="tom" value="1" />
-					<input class="tom" type="checkbox" name="tom" value="2" />
-					<input class="tom" type="checkbox" name="tom" value="3" />
-					<input class="tom" type="checkbox" name="tom" value="4" />			
-					<input class="tom" type="checkbox" name="tom" value="5" />
-					<input class="tom" type="checkbox" name="tom" value="6" />
-					<input class="tom" type="checkbox" name="tom" value="7" />
-					<input class="tom" type="checkbox" name="tom" value="8" />			
-					<input class="tom" type="checkbox" name="tom" value="9" />
+				
 			
-		
-			
-				</div>
-
-				<label>Cymbal</label>
-				<div class=" instrument "  >
-					<input class="cymbal" type="checkbox" name="cymbal" value="0"  />					
-					<input class="cymbal" type="checkbox" name="cymbal" value="1"  />
-					<input class="cymbal" type="checkbox" name="cymbal" value="2"  />
-					<input class="cymbal" type="checkbox" name="cymbal" value="3" />
-					<input class="cymbal" type="checkbox" name="cymbal" value="4" />			
-					<input class="cymbal" type="checkbox" name="cymbal" value="5" />
-					<input class="cymbal" type="checkbox" name="cymbal" value="6" />
-					<input class="cymbal" type="checkbox" name="cymbal" value="7" />
-					<input class="cymbal" type="checkbox" name="cymbal" value="8" />			
-					<input class="cymbal" type="checkbox" name="cymbal" value="9" />
-
-				</div>
-
-
-				<label>Snare</label>
-				<div class=" instrument "  >
-					<input class="snare" type="checkbox" name="snare" value="0" />			
-					<input class="snare" type="checkbox" name="snare" value="1" />
-					<input class="snare" type="checkbox" name="snare" value="2" />
-					<input class="snare" type="checkbox" name="snare" value="3" />
-					<input class="snare" type="checkbox" name="snare" value="4" />			
-					<input class="snare" type="checkbox" name="snare" value="5" />
-					<input class="snare" type="checkbox" name="snare" value="6" />
-					<input class="snare" type="checkbox" name="snare" value="7" />
-					<input class="snare" type="checkbox" name="snare" value="8" />			
-					<input class="snare" type="checkbox" name="snare" value="9" />
-				</div>
-	
-
-
-				<label>Kick</label>
-				<div class=" instrument" >
-					
-					<input class="kick" type="checkbox" name="kick" value="0" />	
-					<input class="kick" type="checkbox" name="kick" value="1" />
-					<input class="kick" type="checkbox" name="kick" value="2" />
-					<input class="kick" type="checkbox" name="kick" value="3" />
-					<input class="kick" type="checkbox" name="kick" value="4" />			
-					<input class="kick" type="checkbox" name="kick" value="5" />
-					<input class="kick" type="checkbox" name="kick" value="6" />
-					<input class="kick" type="checkbox" name="kick" value="7" />
-					<input class="kick" type="checkbox" name="kick" value="8" />			
-					<input class="kick" type="checkbox" name="kick" value="9" />
-				</div>
-				<label>Tambourine</label>
-				<div class=" instrument" >
-					
-					<input class="tambourine" type="checkbox" name="tambourine" value="0" />	
-					<input class="tambourine" type="checkbox" name="tambourine" value="1" />
-					<input class="tambourine" type="checkbox" name="tambourine" value="2" />
-					<input class="tambourine" type="checkbox" name="tambourine" value="3" />
-					<input class="tambourine" type="checkbox" name="tambourine" value="4" />			
-					<input class="tambourine" type="checkbox" name="tambourine" value="5" />
-					<input class="tambourine" type="checkbox" name="tambourine" value="6" />
-					<input class="tambourine" type="checkbox" name="tambourine" value="7" />
-					<input class="tambourine" type="checkbox" name="tambourine" value="8" />			
-					<input class="tambourine" type="checkbox" name="tambourine" value="9" />
-				</div>
-
 			</div>
 		</form>
 		
 		
 		<div class="clear"></div>
-	</div>
-<div class="clear"> </div>
+
 	</div> <!-- .content-wrapper -->
-	</main> <!-- .cd-main-content -->
+</main> <!-- .cd-main-content -->
 <div class="clear"> </div>
-<audio  class="kick" src="../sounds/1.wav"></audio>
-<audio   class="snare" src="../sounds/2.wav"></audio>
-<audio   class="tom" src="../sounds/3.wav"></audio>
-<audio   class="cymbal" src="../sounds/4.wav"></audio>
-<audio   class="tambourine" src="../sounds/tambourine.mp3"></audio>
+
 <footer>
 	<div class="links">
 		<div class="l-container">
